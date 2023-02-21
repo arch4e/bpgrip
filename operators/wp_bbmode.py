@@ -163,7 +163,15 @@ class ChangeWPBBmodeToSub(bpy.types.Operator):
          exit_code = change_wp_bbmode("SUB")
          return exit_code
 
-# ToDo: 'HUE'
+@registerdcr
+class ChangeWPBBmodeTo(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_hue"
+    bl_label  = "Change brush blending mode in WP mode to Hue"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("HUE")
+         return exit_code
+
 # ToDo: 'SATURATION'
 # ToDo: 'COLOR'
 # ToDo: 'LUMINOSITY'
