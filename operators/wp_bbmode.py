@@ -136,7 +136,15 @@ class ChangeWPBBmodeToPinLight(bpy.types.Operator):
          exit_code = change_wp_bbmode("PINLIGHT")
          return exit_code
 
-# ToDo: 'DIFFERENCE'
+@registerdcr
+class ChangeWPBBmodeToDifference(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_difference"
+    bl_label  = "Change brush blending mode in WP mode to Difference"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("DIFFERENCE")
+         return exit_code
+
 # ToDo: 'EXCLUSION'
 # ToDo: 'SUB'
 # ToDo: 'HUE'
