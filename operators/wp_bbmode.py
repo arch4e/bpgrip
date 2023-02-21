@@ -1,7 +1,15 @@
 import bpy
 from .register import registerdcr
 
-# ToDo: 'MIX'
+@registerdcr
+class ChangeWPBBmodeToMix(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_mix"
+    bl_label  = "Change brush blending mode in WP mode to Mix"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("MIX")
+         return exit_code
+
 # ToDo: 'DARKEN'
 # ToDo: 'MUL'
 # ToDo: 'COLORBURN'
