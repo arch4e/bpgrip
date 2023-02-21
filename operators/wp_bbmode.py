@@ -208,7 +208,14 @@ class ChangeWPBBmodeToEraseAlpha(bpy.types.Operator):
          exit_code = change_wp_bbmode("ERASE_ALPHA")
          return exit_code
 
-# ToDo: 'ADD_ALPHA'
+@registerdcr
+class ChangeWPBBmodeToAddAlpha(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_add_alpha"
+    bl_label  = "Change brush blending mode in WP mode to add alpha"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("ADD_ALPHA")
+         return exit_code
 
 def change_wp_bbmode(mode):
     try:
