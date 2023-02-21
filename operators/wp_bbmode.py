@@ -172,7 +172,15 @@ class ChangeWPBBmodeTo(bpy.types.Operator):
          exit_code = change_wp_bbmode("HUE")
          return exit_code
 
-# ToDo: 'SATURATION'
+@registerdcr
+class ChangeWPBBmodeToSaturation(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_saturation"
+    bl_label  = "Change brush blending mode in WP mode to Saturation"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("SATURATION")
+         return exit_code
+
 # ToDo: 'COLOR'
 # ToDo: 'LUMINOSITY'
 # ToDo: 'ERASE_ALPHA'
