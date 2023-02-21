@@ -4,7 +4,7 @@ bl_info = {
     "name"    : "bpgrip",
     "category": "3D View",
     "location": "",
-    "version" : (0,1),
+    "version" : (0,2),
     "blender" : (3,0,0),
     "author"  : "ShioN"
 }
