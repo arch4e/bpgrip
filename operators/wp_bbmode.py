@@ -127,7 +127,15 @@ class ChangeWPBBmodeToLinearLight(bpy.types.Operator):
          exit_code = change_wp_bbmode("LINEARLIGHT")
          return exit_code
 
-# ToDo: 'PINLIGHT'
+@registerdcr
+class ChangeWPBBmodeToPinLight(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_pinlight"
+    bl_label  = "Change brush blending mode in WP mode to Pin Light"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("PINLIGHT")
+         return exit_code
+
 # ToDo: 'DIFFERENCE'
 # ToDo: 'EXCLUSION'
 # ToDo: 'SUB'
