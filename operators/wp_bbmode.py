@@ -64,7 +64,14 @@ class ChangeWPBBmodeToScreen(bpy.types.Operator):
          exit_code = change_wp_bbmode("SCREEN")
          return exit_code
 
-# ToDo: 'COLORDODGE'
+@registerdcr
+class ChangeWPBBmodeToColorDodge(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_colordodge"
+    bl_label  = "Change brush blending mode in WP mode to Color Dodge"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("COLORDODGE")
+         return exit_code
 
 @registerdcr
 class ChangeWPBBmodeToAdd(bpy.types.Operator):
