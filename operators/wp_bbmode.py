@@ -190,7 +190,15 @@ class ChangeWPBBmodeToColor(bpy.types.Operator):
          exit_code = change_wp_bbmode("COLOR")
          return exit_code
 
-# ToDo: 'LUMINOSITY'
+@registerdcr
+class ChangeWPBBmodeToLuminosity(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_luminosity"
+    bl_label  = "Change brush blending mode in WP mode to Luminosity"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("LUMINOSITY")
+         return exit_code
+
 # ToDo: 'ERASE_ALPHA'
 # ToDo: 'ADD_ALPHA'
 
