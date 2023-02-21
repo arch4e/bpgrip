@@ -15,6 +15,10 @@ Blender Painting Utility
 ## Class List
 
 ```
+> bpgrip.change_sp_bbmode.<mode>
+Change Brush Blend Mode in Sculpt Mode to <mode>
+Keymap: 3D View >> Sculpt >> Sculpt (Global)
+
 > bpgrip.change_tp_bbmode.<mode>
 Change Brush Blend Mode in Texture Paint Mode to <mode>
 Keymap: 3D View >> Image Paint >> Image Paint (Global)
