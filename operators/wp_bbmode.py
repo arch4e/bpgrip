@@ -154,7 +154,15 @@ class ChangeWPBBmodeToExclusion(bpy.types.Operator):
          exit_code = change_wp_bbmode("EXCLUSION")
          return exit_code
 
-# ToDo: 'SUB'
+@registerdcr
+class ChangeWPBBmodeToSub(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_sub"
+    bl_label  = "Change brush blending mode in WP mode to Sub"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("SUB")
+         return exit_code
+
 # ToDo: 'HUE'
 # ToDo: 'SATURATION'
 # ToDo: 'COLOR'
