@@ -82,7 +82,15 @@ class ChangeWPBBmodeToAdd(bpy.types.Operator):
          exit_code = change_wp_bbmode("ADD")
          return exit_code
 
-# ToDo: 'OVERLAY'
+@registerdcr
+class ChangeWPBBmodeToOverlay(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_overlay"
+    bl_label  = "Change brush blending mode in WP mode to Overlay"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("OVERLAY")
+         return exit_code
+
 # ToDo: 'SOFTLIGHT'
 # ToDo: 'HARDLIGHT'
 # ToDo: 'VIVIDLIGHT'
