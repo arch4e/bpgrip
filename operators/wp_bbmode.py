@@ -109,7 +109,15 @@ class ChangeWPBBmodeToHardLight(bpy.types.Operator):
          exit_code = change_wp_bbmode("HARDLIGHT")
          return exit_code
 
-# ToDo: 'VIVIDLIGHT'
+@registerdcr
+class ChangeWPBBmodeToVividLight(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_vividlight"
+    bl_label  = "Change brush blending mode in WP mode to Vivid Light"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("VIVIDLIGHT")
+         return exit_code
+
 # ToDo: 'LINEARLIGHT'
 # ToDo: 'PINLIGHT'
 # ToDo: 'DIFFERENCE'
