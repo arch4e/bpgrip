@@ -145,7 +145,15 @@ class ChangeWPBBmodeToDifference(bpy.types.Operator):
          exit_code = change_wp_bbmode("DIFFERENCE")
          return exit_code
 
-# ToDo: 'EXCLUSION'
+@registerdcr
+class ChangeWPBBmodeToExclusion(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_exclusion"
+    bl_label  = "Change brush blending mode in WP mode to Exclusion"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("EXCLUSION")
+         return exit_code
+
 # ToDo: 'SUB'
 # ToDo: 'HUE'
 # ToDo: 'SATURATION'
