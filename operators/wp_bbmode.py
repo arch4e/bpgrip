@@ -55,7 +55,15 @@ class ChangeWPBBmodeToLighten(bpy.types.Operator):
          exit_code = change_wp_bbmode("LIGHTEN")
          return exit_code
 
-# ToDo: 'SCREEN'
+@registerdcr
+class ChangeWPBBmodeToScreen(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_screen"
+    bl_label  = "Change brush blending mode in WP mode to Screen"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("SCREEN")
+         return exit_code
+
 # ToDo: 'COLORDODGE'
 
 @registerdcr
