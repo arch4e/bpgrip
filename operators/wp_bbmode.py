@@ -28,7 +28,15 @@ class ChangeWPBBmodeToMul(bpy.types.Operator):
          exit_code = change_wp_bbmode("MUL")
          return exit_code
 
-# ToDo: 'COLORBURN'
+@registerdcr
+class ChangeWPBBmodeToColorBurn(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_colorburn"
+    bl_label  = "Change brush blending mode in WP mode to Color Burn"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("COLORBURN")
+         return exit_code
+
 # ToDo: 'LINEARBURN'
 # ToDo: 'LIGHTEN'
 # ToDo: 'SCREEN'
