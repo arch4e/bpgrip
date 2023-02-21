@@ -46,7 +46,15 @@ class ChangeWPBBmodeToLinearBurn(bpy.types.Operator):
          exit_code = change_wp_bbmode("LINEARBURN")
          return exit_code
 
-# ToDo: 'LIGHTEN'
+@registerdcr
+class ChangeWPBBmodeToLighten(bpy.types.Operator):
+    bl_idname = "bpgrip.change_wp_bbmode_lighten"
+    bl_label  = "Change brush blending mode in WP mode to Lighten"
+
+    def execute(self, context):
+         exit_code = change_wp_bbmode("LIGHTEN")
+         return exit_code
+
 # ToDo: 'SCREEN'
 # ToDo: 'COLORDODGE'
 
