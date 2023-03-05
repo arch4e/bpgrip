@@ -1,10 +1,10 @@
 if "bpy" not in locals():
     import bpy
-    from . import sp_bbmode
-    from . import tp_bbmode
-    from . import wp_bbmode
+    from . import bbmode_draw
+    from . import bbmode_paint
+    from . import bbmode_texdraw
 else:
     import importlib
-    importlib.reload(sp_bbmode)
-    importlib.reload(tp_bbmode)
-    importlib.reload(wp_bbmode)
+    importlib.reload(bbmode_draw)
+    importlib.reload(bbmode_paint)
+    importlib.reload(bbmode_texdraw)
