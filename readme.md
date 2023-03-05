@@ -12,20 +12,24 @@ Blender Painting Utility
    * `Edit >> Preferences >> Keymap >> 3D View >> ... >> Add New`
    * Change `none` to `bpgrip.*`
 
-## Class List
+## Keymap
 
 ```
-> bpgrip.change_sp_bbmode.<mode>
-Change Brush Blend Mode in Sculpt Mode to <mode>
-Keymap: 3D View >> Sculpt >> Sculpt (Global)
+[ Paint in Sculpt Mode ]
+Keymap    : 3D View >> Sculpt >> Sculpt (Global)
+Identifier: bpgrip.set_bbmode_paint_<mode>
 
-> bpgrip.change_tp_bbmode.<mode>
-Change Brush Blend Mode in Texture Paint Mode to <mode>
-Keymap: 3D View >> Image Paint >> Image Paint (Global)
+[ Texture Paint Mode ]
+Keymap    : 3D View >> Image Paint >> Image Paint (Global)
+Identifier: bpgrip.set_bbmode_texdraw_<mode>
 
-> bpgrip.change_wp_bbmode.<mode>
-Change Brush Blend Mode in Weight Paint Mode to <mode>
-Keymap: 3D View >>  Weight Paint >> Weight Paint (Global)
+[ Vertex Paint Mode ]
+Keymap    : 3D View >> 3D View >> Vertex Paint >> Vertex Paint (Global)
+Identifier: bpgrip.set_bbmode_draw_<mode>
+
+[ Weight Paint Mode ]
+Keymap    : 3D View >> Weight Paint >> Weight Paint (Global)
+Identifier: bpgrip.set_bbmode_draw_<mode>
 ```
 
 ## License
