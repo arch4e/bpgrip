@@ -4,7 +4,7 @@ bl_info = {
     "name"    : "bpgrip",
     "category": "3D View",
     "location": "",
-    "version" : (1,0),
+    "version" : (2,0),
     "blender" : (3,0,0),
     "author"  : "ShioN"
 }
@@ -12,9 +12,11 @@ bl_info = {
 if "bpy" not in locals():
     import bpy
     from . import operators
+    from . import utils
 else:
     import importlib
     importlib.reload(operators)
+    importlib.reload(utils)
 
 def check_blender_version():
     if bpy.app.version < bl_info.get("blender"):
@@ -26,7 +28,7 @@ def register():
     check_blender_version()
 
     try:
-        for cls in operators.register.class_list:
+        for cls in utils.register.class_list:
             bpy.utils.register_class(cls)
     except Exception as e:
         print("error: registration failed")
@@ -35,7 +37,7 @@ def register():
 
 def unregister():
     try:
-        for cls in reversed(operators.register.class_list):
+        for cls in reversed(utils.register.class_list):
             bpy.utils.unregister_class(cls)
     except Exception:
         print("error: unregistration failed")
@@ -43,4 +45,3 @@ def unregister():
 
 if __name__ == "__main__":
     register()
-
