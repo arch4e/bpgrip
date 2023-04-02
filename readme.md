@@ -10,29 +10,32 @@ Blender Painting Utility
 1. Enable `bpgrip` 
 1. Setup Keymap
    * `Edit >> Preferences >> Keymap >> 3D View >> ... >> Add New`
-   * Change `none` to `bpgrip.*`
+   * Change `none` to `bpgrip.set_bbmode`
 
 ## Keymap
 
 ```
 [ Paint in Sculpt Mode ]
 Keymap    : 3D View >> Sculpt >> Sculpt (Global)
-Identifier: bpgrip.set_bbmode_paint_<mode>
+bl_mode   : Paint
+bb_mode   : MIX, ADD, etc...
 
 [ Texture Paint Mode ]
 Keymap    : 3D View >> Image Paint >> Image Paint (Global)
-Identifier: bpgrip.set_bbmode_texdraw_<mode>
+bl_mode   : TexDraw
+bb_mode   : MIX, ADD, etc...
 
 [ Vertex Paint Mode ]
 Keymap    : 3D View >> 3D View >> Vertex Paint >> Vertex Paint (Global)
-Identifier: bpgrip.set_bbmode_draw_<mode>
+bl_mode   : Draw
+bb_mode   : MIX, ADD, etc...
 
 [ Weight Paint Mode ]
 Keymap    : 3D View >> Weight Paint >> Weight Paint (Global)
-Identifier: bpgrip.set_bbmode_draw_<mode>
+bl_mode   : Draw
+bb_mode   : MIX, ADD, etc...
 ```
 
 ## License
 
 MIT
-
