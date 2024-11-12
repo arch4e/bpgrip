@@ -2,6 +2,7 @@ import bpy
 
 from ..utils.register import registerdcr
 
+
 @registerdcr
 class SetBBmode(bpy.types.Operator):
     bl_idname = "bpgrip.set_bbmode"
@@ -17,3 +18,4 @@ class SetBBmode(bpy.types.Operator):
         except Exception as e:
             print(e)
             return { "CANCELLED" }
+
