@@ -1,6 +1,6 @@
-if "bpy" not in locals():
-    import bpy
+if 'bpy' not in locals():
     from . import bbmode
 else:
     import importlib
     importlib.reload(bbmode)
+
