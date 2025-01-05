@@ -1,4 +1,4 @@
-if "bpy" not in locals():
+if 'bpy' not in locals():
     from . import register
 else:
     import importlib

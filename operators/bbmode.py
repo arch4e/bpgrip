@@ -5,8 +5,8 @@ from ..utils.register import registerdcr
 
 @registerdcr
 class SetBBmode(bpy.types.Operator):
-    bl_idname = "bpgrip.set_bbmode"
-    bl_label  = "Set brush blending mode"
+    bl_idname = 'bpgrip.set_bbmode'
+    bl_label  = 'Set brush blending mode'
 
     bl_mode: bpy.props.StringProperty()
     bb_mode: bpy.props.StringProperty()
@@ -17,5 +17,5 @@ class SetBBmode(bpy.types.Operator):
             return {'FINISHED'}
         except Exception as e:
             print(e)
-            return { "CANCELLED" }
+            return { 'CANCELLED' }
 
