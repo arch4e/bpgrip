@@ -3,7 +3,7 @@ schema_version = "1.0.0"
 # Example of manifest file for a Blender extension
 # Change the values according to your extension
 id      = "bpgrip"
-version = "2.0.0"
+version = "3.0.0"
 name    = "bpgrip"
 tagline = "Blender Pencil Tool Utility"
 maintainer = "N <contact@arch4e.com>"
@@ -19,7 +19,7 @@ tags = [
   "3D View",
 ]
 
-blender_version_min = "4.2.0"
+blender_version_min = "4.3.0"
 # # Optional: Blender version that the extension does not support, earlier versions are supported.
 # # This can be omitted and defined later on the extensions platform if an issue is found.
 # blender_version_max = "5.1.0"

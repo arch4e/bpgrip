@@ -6,8 +6,8 @@ bl_info = {
     'category': '3D View',
     'location': '',
     'version' : (2,0),
-    'blender' : (3,0,0),
-    'author'  : 'ShioN'
+    'blender' : (4,3,0),
+    'author'  : 'N'
 }
 
 
